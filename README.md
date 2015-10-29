@@ -93,7 +93,8 @@ $moderatorRole = Role::create([
     'slug' => 'forum.moderator',
 ]);
 ```
-
+####OR
+```You can directly insert into database(roles).```
 
 ### Attaching And Detaching Roles
 
@@ -111,6 +112,9 @@ $user->attachRole($adminRole); // you can pass whole object, or just an id
 $user->detachRole($adminRole); // in case you want to detach role
 $user->detachAllRoles(); // in case you want to detach all roles
 ```
+####OR
+```You can directly insert into database(role_user).```
+
 
 ### Checking For Roles
 
@@ -151,6 +155,9 @@ $createUsersPermission = Permission::create([
     'description' => '', // optional
 ]);
 
+####OR
+```You can directly insert into database(permissions).```
+
 ### Attaching And Detaching Permissions
 
 You can attach permissions to a role or directly to a specific user (and of course detach them as well).
@@ -173,6 +180,8 @@ $role->detachAllPermissions(); // in case you want to detach all permissions
 $user->detachPermission($deleteUsersPermission);
 $user->detachAllPermissions();
 ```
+####OR
+```You can directly insert into database(permission_role,permission_user).```
 
 ### Checking For Permissions
 
