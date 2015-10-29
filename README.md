@@ -54,8 +54,9 @@ Publish the package config file and migrations to your application. Run these co
 
     php artisan vendor:publish --provider="Bican\Roles\RolesServiceProvider" --tag=config
     php artisan vendor:publish --provider="Bican\Roles\RolesServiceProvider" --tag=migrations
+    php artisan migrate
 
-And also run migrations.
+
 
     php artisan migrate
 
