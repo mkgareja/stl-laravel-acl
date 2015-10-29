@@ -55,10 +55,7 @@ Publish the package config file and migrations to your application. Run these co
     php artisan vendor:publish --provider="Bican\Roles\RolesServiceProvider" --tag=config
     php artisan vendor:publish --provider="Bican\Roles\RolesServiceProvider" --tag=migrations
     php artisan migrate
-
-
-
-    php artisan migrate
+    
 
 > This uses the default users table which is in Laravel. You should already have the migration file for the users table available and migrated.
 
