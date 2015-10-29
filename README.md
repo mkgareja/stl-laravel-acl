@@ -138,20 +138,6 @@ if ($user->is('admin|moderator', true)) {
 }
 ```
 
-### Levels
-
-When you are creating roles, there is optional parameter `level`. It is set to `1` by default, but you can overwrite it and then you can do something like this:
- 
-```php
-if ($user->level() > 4) {
-    //
-}
-```
-
-> If user has multiple roles, method `level` returns the highest one.
-
-`Level` has also big effect on inheriting permissions. About it later.
-
 ### Creating Permissions
 
 It's very simple thanks to `Permission` model.
