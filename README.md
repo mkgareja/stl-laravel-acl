@@ -188,47 +188,6 @@ if ($user->canDeleteUsers()) {
 
 You can check for multiple permissions the same way as roles. You can make use of additional methods like `canOne`, `canAll` or `hasPermission`.
 
-### Permissions Inheriting
-
-Role with higher level is inheriting permission from roles with lower level.
-
-There is an example of this `magic`:
-
-You have three roles: `user`, `moderator` and `admin`. User has a permission to read articles, moderator can manage comments and admin can create articles. User has a level 1, moderator level 2 and admin level 3. It means, moderator and administrator has also permission to read articles, but administrator can manage comments as well.
-
-> If you don't want permissions inheriting feature in you application, simply ignore `level` parameter when you're creating roles.
-
-### Entity Check
-
-Let's say you have an article and you want to edit it. This article belongs to a user (there is a column `user_id` in articles table).
-
-```php
-use App\Article;
-use Bican\Roles\Models\Permission;
-
-$editArticlesPermission = Permission::create([
-    'name' => 'Edit articles',
-    'slug' => 'edit.articles',
-    'model' => 'App\Article',
-]);
-
-$user->attachPermission($editArticlesPermission);
-
-$article = Article::find(1);
-
-if ($user->allowed('edit.articles', $article)) { // $user->allowedEditArticles($article)
-    //
-}
-```
-
-This condition checks if the current user is the owner of article. If not, it will be looking inside user permissions for a row we created before.
-
-```php
-if ($user->allowed('edit.articles', $article, false)) { // now owner check is disabled
-    //
-}
-```
-
 ### Blade Extensions
 
 There are four Blade extensions. Basically, it is replacement for classic if statements.
