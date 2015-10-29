@@ -2,6 +2,8 @@
 
 ACL in Laravel 5.*: Roles and Permissions
 
+Thanks to [romanbican](https://github.com/romanbican/roles), It's simplified version of [romanbican roles](https://github.com/romanbican/roles).
+
 For some projects, you may find that you require greater flexibility. Consider a CMS like Laravel, where users may be assigned roles, each which has its own set of permissions.This package is very easy to set up. There are only couple of steps.
 
 ## Installation
