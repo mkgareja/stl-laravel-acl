@@ -180,7 +180,7 @@ $role->detachAllPermissions(); // in case you want to detach all permissions
 $user->detachPermission($deleteUsersPermission);
 $user->detachAllPermissions();
 ```
-####OR
+#####OR
 ```You can directly insert into database(permission_role,permission_user).```
 
 ### Checking For Permissions
