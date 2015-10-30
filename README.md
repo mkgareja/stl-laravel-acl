@@ -93,7 +93,7 @@ $moderatorRole = Role::create([
     'slug' => 'forum.moderator',
 ]);
 ```
-####OR
+#####OR
 ```You can directly insert into database(roles).```
 
 ### Attaching And Detaching Roles
@@ -112,7 +112,7 @@ $user->attachRole($adminRole); // you can pass whole object, or just an id
 $user->detachRole($adminRole); // in case you want to detach role
 $user->detachAllRoles(); // in case you want to detach all roles
 ```
-####OR
+#####OR
 ```You can directly insert into database(role_user).```
 
 
